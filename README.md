@@ -1,7 +1,5 @@
-# TpWebServices para P. y Serv. Web
+# Trabajo Practico "WebServices" 
 Proyecto para Materia de 3er año de la carrera "Analista programador" - Facultad de Ingenieria - UNJu.
-
-# TpWebServices
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.7.
 
