@@ -1,25 +1,56 @@
 <div class="container">
+  <div class="container"></div>
   <h2 class="my-4">Traductor</h2>
+  <button
+    type="button"
+    (click)="obtenerLenguajes()"
+    class="btn btn-primary mb-3"
+  >
+    Obtener lenguajes
+  </button>
+
   <div class="mb-3">
-    <label for="exampleFormControlTextarea1" class="form-label">Traducir</label>
+    <label for="texto" class="form-label">Traducir</label>
     <textarea
       placeholder="Inserte texto a traducir."
       class="form-control"
-      id="exampleFormControlTextarea1"
+      id="texto"
+      name="texto"
+      [(ngModel)]="texto"
       rows="3"
     ></textarea>
+    <div class="container mt-3 d-flex flex-wrap">
+      <div class="me-4">
+        <label for="source" class="me-2">Source</label>
+        <input
+          type="text"
+          id="source"
+          name="source"
+          value
+          [(ngModel)]="source"
+        />
+      </div>
+      <div>
+        <label for="source" class="me-2">Target</label>
+        <input
+          type="text"
+          id="target"
+          name="target"
+          value
+          [(ngModel)]="target"
+        />
+      </div>
+    </div>
   </div>
+
   <!-- Boton -->
-  <button type="button" class="btn btn-primary">Traducir</button>
-  <div class="mt-4">
+  <button type="button" class="btn btn-primary" (click)="traducirTexto()">
+    Traducir
+  </button>
+  <div class="bs">
     <label for="exampleFormControlTextarea1" class="form-label"
       >Traduccion</label
     >
-    <textarea
-      placeholder="Aqui vera su texto traducido."
-      class="form-control"
-      id="exampleFormControlTextarea1"
-      rows="3"
-    ></textarea>
+    <h3>{{ textoTraducido }}</h3>
   </div>
 </div>

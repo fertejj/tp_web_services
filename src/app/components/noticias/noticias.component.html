@@ -1,0 +1,15 @@
+<div class="container">
+  <h3 class="card-title my-3">Ultimas Noticias</h3>
+
+  <div class="row" *ngFor="let noticia of noticias; index as i">
+    <div class="col-md-6 mb-4">
+      <div class="card">
+        <div class="card-body">
+          <img class="card-img-top" src={{noticia.mainMedia[0].gallery.url}} alt="Title" />
+          <h4 class="card-title mt-2">{{noticia.title}}</h4>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
