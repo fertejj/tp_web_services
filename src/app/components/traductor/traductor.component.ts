@@ -15,12 +15,14 @@ export class TraductorComponent {
   source: string = '';
   target: string = '';
   textoTraducido: string = '';
+  languages: any[] = [];
   constructor(private translateService: TranslateService) {}
 
   obtenerLenguajes() {
     return this.translateService.getLanguages().subscribe(
       (data) => {
-        console.log(data);
+        this.languages = data.data.languages;
+        console.log(this.languages);
       },
       (error) => {
         console.log(error);

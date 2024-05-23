@@ -22,23 +22,37 @@
     <div class="container mt-3 d-flex flex-wrap">
       <div class="me-4">
         <label for="source" class="me-2">Source</label>
-        <input
+        <select
           type="text"
           id="source"
           name="source"
-          value
+          value="{{ source }}"
           [(ngModel)]="source"
-        />
+        >
+          <option
+            *ngFor="let lenguaje of languages; let i = index"
+            [value]="lenguaje.language"
+          >
+            {{ lenguaje.language }}
+          </option>
+        </select>
       </div>
       <div>
-        <label for="source" class="me-2">Target</label>
-        <input
+        <label for="target" class="me-2">Target</label>
+        <select
           type="text"
           id="target"
           name="target"
-          value
+          value="{{ target }}"
           [(ngModel)]="target"
-        />
+        >
+          <option
+            *ngFor="let lenguaje of languages; let i = index"
+            [value]="lenguaje.language"
+          >
+            {{ lenguaje.language }}
+          </option>
+        </select>
       </div>
     </div>
   </div>

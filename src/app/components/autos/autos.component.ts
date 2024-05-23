@@ -14,6 +14,8 @@ export class AutosComponent {
   constructor(private autosService: AutosService) {}
 
   makes: any[] = [];
+  modelsByMake: any[]= [];
+
   getMakes() {
     return this.autosService.getMakes().subscribe(
       (response) => {
@@ -26,10 +28,11 @@ export class AutosComponent {
     );
   }
 
-  getModels(){
-    return this.autosService.getModels().subscribe(
+  getModels(makeId: string){
+    return this.autosService.getModels(makeId).subscribe(
       (response) => {
         console.log(response);
+        this.modelsByMake = response;
       },
       (err) => {
         console.log(err);
