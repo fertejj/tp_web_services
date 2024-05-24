@@ -39,4 +39,8 @@ export class AutosComponent {
       }
     );
   }
+
+  ngOnInit(): void {
+    this.getMakes();
+  }
 }

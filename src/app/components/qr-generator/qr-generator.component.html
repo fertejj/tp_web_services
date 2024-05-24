@@ -1,0 +1,14 @@
+<div class="container d-flex justify-content-center  min-vh-100">
+    <form class="w-100" style="max-width: 500px;">
+        <div class="mb-3 text-center">
+            <label for="data" class="form-label"><h5>Link o data a introducir en el QR:</h5></label>
+            <input type="text" class="form-control" id="data" name="data" [(ngModel)]="data">
+        </div>
+        <div class="text-center mb-3">
+            <button type="submit" (click)="generateQr(data)" class="btn btn-primary">Submit</button>
+        </div>
+        <div class="mb-3 ">
+            <h5>QR:</h5>
+        </div>
+    </form>
+</div>
